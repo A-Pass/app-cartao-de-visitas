@@ -1,5 +1,6 @@
-package br.com.apass.cartaodevisitas
+package br.com.apass.cartaodevisitas.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.apass.cartaodevisitas.databinding.ActivityMainBinding
@@ -13,5 +14,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        this.initClicks()
+    }
+
+    private fun initClicks() {
+        this.binding.fab.setOnClickListener() {
+            val intent = Intent(this@MainActivity, AdicionarCartaoDeVisicaActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
