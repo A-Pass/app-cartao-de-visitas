@@ -10,6 +10,7 @@ abstract class AppDatabase: RoomDatabase() {
     abstract fun cartaoDeVisitaDao() : CartaoDeVisitaDao
 
     companion object {
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 

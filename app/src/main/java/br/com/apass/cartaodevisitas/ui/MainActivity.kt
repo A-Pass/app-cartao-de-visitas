@@ -17,17 +17,24 @@ class MainActivity : AppCompatActivity() {
         MainViewModelFactory((application as App).repository)
     }
 
+    private val adapter by lazy { CartaoDeVisitaAdapter() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
+        this.setContentView(binding.root)
+        this.binding.rvCartoes.adapter = adapter
+        this.getAllCartoesDeVisitas()
         this.initClicks()
     }
 
     private fun initClicks() {
         this.binding.fab.setOnClickListener() {
             val intent = Intent(this@MainActivity, AdicionarCartaoDeVisicaActivity::class.java)
-            startActivity(intent)
+            this.startActivity(intent)
         }
+    }
+gene
+    private fun getAllCartoesDeVisitas() {
+        this.viewModel.getAll()
     }
 }

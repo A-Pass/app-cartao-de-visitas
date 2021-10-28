@@ -8,4 +8,5 @@
     <string name="label_cor">Cor</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="label_show_success">Cartão cadastrado com sucesso!</string>
 </resources>

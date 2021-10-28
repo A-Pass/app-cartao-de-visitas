@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class CartaoDeVisita(
-    @PrimaryKey val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val nome: String,
     val telefone: String,
     val email: String,
