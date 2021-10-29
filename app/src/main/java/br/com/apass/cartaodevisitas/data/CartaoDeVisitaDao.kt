@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface CartaoDeVisitaDao {
 
-    @Query("SELECT * FROM CartaoDeVisita")
+    @Query("SELECT * FROM cartaodevisita")
     fun getAll(): LiveData<List<CartaoDeVisita>>
 
     @Insert(onConflict = IGNORE)

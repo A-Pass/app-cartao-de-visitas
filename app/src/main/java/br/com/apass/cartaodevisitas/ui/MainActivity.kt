@@ -33,8 +33,10 @@ class MainActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
     }
-gene
+
     private fun getAllCartoesDeVisitas() {
-        this.viewModel.getAll()
+        this.viewModel.getAll().observe(this) { cartoesDeVisitas ->
+            adapter.submitList(cartoesDeVisitas)
+        }
     }
 }
